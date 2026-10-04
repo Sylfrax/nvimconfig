@@ -18,6 +18,7 @@
     ```
 
 ## File structure
+```txt
 nvim
 ├── LICENSE
 ├── README.md
@@ -40,3 +41,4 @@ nvim
 │           ├── mini.lua
 │           └── which-key.lua
 └── nvim-pack-lock.json
+```
