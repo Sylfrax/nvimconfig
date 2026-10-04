@@ -34,15 +34,19 @@ local plugins = {
 --    gh_v("saghen", "blink.cmp", "v1.10.2"),
 
     --mini.nvim
-    gh("echasnovski", "mini.nvim")
+--    gh("echasnovski", "mini.nvim")
 }
 
 
 vim.pack.add(plugins)
+require("plugins.tools.mini")
+
+require("plugins.embellish.colorscheme")
+
+require("plugins.tools.which-key")
+require("plugins.embellish.lualine")
+
 require("plugins.lsp.tree")
 require("plugins.lsp.lsp")
 
-require("plugins.embellish.colorscheme")
-require("plugins.embellish.lualine")
-require("plugins.tools.mini")
-require("plugins.tools.which-key")
+

@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
-vim.api.nvim_create_autocmd("BufReadPre", {
+vim.api.nvim_create_autocmd("VimEnter", {
     once = true,
     callback = function()
         vim.pack.add({ gh("neovim", "nvim-lspconfig") })
