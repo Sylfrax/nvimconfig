@@ -1,12 +1,12 @@
-# nvimconfig
-A simple personal nvim config
+# Nvimconfig
+A simple personal nvim config, using the *vim.pack*, only **6** plugins
 
 ## Requirements
 - Neovim >= 0.12.0
 - Git
 - Nerd Font
 
-## Install if you want use it
+## Installation
 1. Back up your config dir
     ```bash
     mv ~/.config/nvim/ ~/.config/nvim.bak
@@ -16,7 +16,7 @@ A simple personal nvim config
     ```bash
     git clone https://github.com/Sylfrax/nvimconfig.git ~/.config/nvim
     ```
-
+3. 
 ## File structure
 ```txt
 nvim
