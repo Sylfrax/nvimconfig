@@ -1,5 +1,5 @@
 # nvimconfig
-一个简单的个人配置（自用）
+An simple personal nvim config
 
 ## Requirements
 - Neovim >= 12.0
