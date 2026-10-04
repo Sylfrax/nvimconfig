@@ -1,8 +1,8 @@
 # nvimconfig
-An simple personal nvim config
+A simple personal nvim config
 
 ## Requirements
-- Neovim >= 12.0
+- Neovim >= 0.12.0
 - Git
 - Nerd Font
 
