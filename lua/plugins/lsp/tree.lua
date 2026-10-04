@@ -18,6 +18,7 @@
 
 -- 3. 配置 FileType 自动命令：按需自动安装并启用 Treesitter
 vim.api.nvim_create_autocmd('FileType', {
+  once = true,
   callback = function(args)
     vim.pack.add({ gh("nvim-treesitter", "nvim-treesitter") })
     vim.notify("Tree-Sitter is add")

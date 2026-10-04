@@ -49,4 +49,3 @@ require("plugins.embellish.lualine")
 require("plugins.lsp.tree")
 require("plugins.lsp.lsp")
 
-
