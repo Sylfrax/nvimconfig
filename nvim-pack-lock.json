@@ -17,6 +17,14 @@
       "rev": "adb0b013aebc2c87c6c8026e7ed4273a3f6f296d",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "nvim-autopairs": {
+      "rev": "430522f95fe4fb7c511ec64f8c1a90cc6a66c05c",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
+    "nvim-cursorline": {
+      "rev": "d4425a9ba73a66fca8a34fda9254eb8949b1784d",
+      "src": "https://github.com/ya2s/nvim-cursorline"
+    },
     "nvim-lspconfig": {
       "rev": "b7b920947f21339ee41fbb38c79d6445e12900aa",
       "src": "https://github.com/neovim/nvim-lspconfig"

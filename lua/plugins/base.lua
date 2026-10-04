@@ -31,6 +31,7 @@ require("plugins.embellish.colorscheme")
 require("plugins.embellish.alpha")
 
 require("plugins.tools.which-key")
+require('plugins.tools.autopairs')
 require("plugins.embellish.lualine")
 
 require("plugins.lsp.tree")
