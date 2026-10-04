@@ -29,7 +29,7 @@ local plugins = {
 --    gh("nvim-lualine", "lualine.nvim"),
 
 
-    gh("nvim-treesitter", "nvim-treesitter"),
+--    gh("nvim-treesitter", "nvim-treesitter"),
     
 --    gh_v("saghen", "blink.cmp", "v1.10.2"),
 
