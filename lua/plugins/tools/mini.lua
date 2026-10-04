@@ -4,7 +4,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
         vim.pack.add({ gh("echasnovski", "mini.nvim") })
         require("mini.pairs").setup()
         require("mini.indentscope").setup()
-        require("mini.starter").setup()
     
         require("mini.pick").setup()
         require("mini.files").setup()
@@ -15,7 +14,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
         require("mini.notify").setup()
     
         require("mini.map").setup()
-        require("mini.animate").setup() 
         require("mini.trailspace").setup()       
     end
 })
