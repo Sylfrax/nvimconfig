@@ -17,7 +17,7 @@ A simple personal nvim config, using the *vim.pack*, only **21** plugins
     ```bash
     git clone https://github.com/Sylfrax/nvimconfig.git ~/.config/nvim
     ```
-3. 
+3. Install fzf
 ## File structure
 ```txt
 nvim
