@@ -1,0 +1,13 @@
+{
+  "runtime": { "version": "LuaJIT" },
+  "workspace": {
+    "library": [
+      "$VIMRUNTIME",
+      "$HOME/.local/share/nvim/lazy"
+    ],
+    "checkThirdParty": false
+  },
+  "diagnostics": {
+    "globals": ["vim"]
+  }
+}

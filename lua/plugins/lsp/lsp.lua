@@ -12,22 +12,10 @@ vim.api.nvim_create_autocmd("UIEnter", {
     callback = function()
         vim.pack.add({ gh("neovim", "nvim-lspconfig") })
 
-        vim.lsp.config("lua_ls", {
-            settings = {
-                Lua = {
-                    diagnostics = { globals = { "vim" } },
-                    workspace = {
-                        library = vim.env.VIMRUNTIME,
-                        checkThirdParty = false,
-                    },
-                },
-            },
-        })
-
         vim.lsp.enable({
+            "emmylua_ls",
             "ocamllsp",
             "rust_analyzer",
-            "lua_ls",
             "clangd",
             "hls",
             "gopls",
