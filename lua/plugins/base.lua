@@ -23,12 +23,12 @@ local plugins = {
     gh("olimorris", "onedarkpro.nvim"),
 }
 
-
 vim.pack.add(plugins)
 require("plugins.tools.mini")
 
 require("plugins.embellish.colorscheme")
 require("plugins.embellish.alpha")
+require('plugins.embellish.indentation-line')
 
 require("plugins.tools.which-key")
 require('plugins.tools.autopairs')

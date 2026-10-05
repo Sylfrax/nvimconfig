@@ -2,7 +2,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     once = true,
     callback = function ()
         vim.pack.add({ gh("echasnovski", "mini.nvim") })
-        require("mini.indentscope").setup()
+--        require("mini.indentscope").setup()
     
         require("mini.pick").setup()
         require("mini.files").setup()
