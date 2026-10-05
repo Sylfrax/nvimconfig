@@ -1,6 +1,6 @@
---local lualine = require("lualine")
 vim.api.nvim_create_autocmd("VimEnter", {
     once = true,
+    group = Embllish,
     callback = function()
         vim.pack.add({ gh("nvim-lualine", "lualine.nvim") })
         vim.notify("Lualine is running( ^3^ )/~~")

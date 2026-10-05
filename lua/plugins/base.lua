@@ -1,4 +1,5 @@
 
+
 ---@param name string
 ---@param repo string
 ---@return string
@@ -20,29 +21,26 @@ gh_v = function (name, repo, ver)
     return { src = tool_pin(name, repo), version = ver }
 end
 
----@param event string
----@param fun function
-Autocmd = function (event, fun)
-    vim.api.nvim_create_autocmd(event, {
-        once = true,
-        callback = fun
-    })
-end
+
 local plugins = {
     gh("olimorris", "onedarkpro.nvim"),
 }
 
 vim.pack.add(plugins)
-require("plugins.tools.mini")
+require('plugins.augroup')
+require('embellish.bufferline')
+require('plugins.embellish.noice')
 
 require("plugins.embellish.colorscheme")
 require("plugins.embellish.alpha")
+require('plugins.tools.oil')
 require('plugins.embellish.indentation-line')
 
 require("plugins.tools.which-key")
 require('plugins.tools.autopairs')
 require("plugins.embellish.lualine")
-
+require('plugins.tools.fzf')
+require('plugins.embellish.highlight-color')
 require("plugins.lsp.tree")
 require("plugins.lsp.lsp")
 

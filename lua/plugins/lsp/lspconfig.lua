@@ -1,5 +1,6 @@
 vim.api.nvim_create_autocmd("LspAttach", {
-    once = true, 
+    once = true,
+    group = Lsp,
     callback = function(ev)
         local map = function (mode, lhs, rhs, desc)
             vim.keymap.set(mode, lhs, rhs, { buffer = ev.buf, desc = desc })
