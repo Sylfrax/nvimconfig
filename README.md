@@ -18,6 +18,33 @@ A simple personal nvim config, using the *vim.pack*, only **21** plugins
     git clone https://github.com/Sylfrax/nvimconfig.git ~/.config/nvim
     ```
 3. Install fzf
+    - Arch-based
+    ```bash
+    sudo pacman -S fzf
+    ```
+    - Debain-based
+    ```bash
+    sudo apt install fzf
+    ```
+    - RHEL-based
+    ```bash
+    sudo dnf install fzf
+    ```
+    - openSUSE
+    ```bash
+    sudo zypper install fzf
+    ```
+    - NixOs
+    ```nix
+    environment.systemPackages = with pkgd; [
+        fzf
+    ]
+    ```
+    Then rebuild
+    ```bash
+    sudo nixos-rebuild switch
+    ```
+
 ## File structure
 ```txt
 nvim
