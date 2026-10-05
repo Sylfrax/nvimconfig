@@ -9,3 +9,7 @@ vim.opt.wrap = false
 vim.opt.smartindent = true
 vim.opt.cursorline = true
 vim.g.mapleader = " "
+vim.g.loaded_matchit = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.opt.shortmess:append({ I = true })

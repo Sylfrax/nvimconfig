@@ -1,10 +1,11 @@
 # Nvimconfig
-A simple personal nvim config, using the *vim.pack*, only **6** plugins
+A simple personal nvim config, using the *vim.pack*, only **21** plugins
 
 ## Requirements
 - Neovim >= 0.12.0
 - Git
 - Nerd Font
+- Fzf
 
 ## Installation
 1. Back up your config dir
