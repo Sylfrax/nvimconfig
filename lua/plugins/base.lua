@@ -28,7 +28,7 @@ local plugins = {
 
 vim.pack.add(plugins)
 require('plugins.augroup')
-require('embellish.bufferline')
+require('plugins.embellish.bufferline')
 require('plugins.embellish.noice')
 
 require("plugins.embellish.colorscheme")
