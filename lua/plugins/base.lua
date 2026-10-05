@@ -44,3 +44,4 @@ require('plugins.embellish.highlight-color')
 require("plugins.lsp.tree")
 require("plugins.lsp.lsp")
 
+require('plugins.specific.md')
