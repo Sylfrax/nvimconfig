@@ -19,6 +19,15 @@ end
 gh_v = function (name, repo, ver)
     return { src = tool_pin(name, repo), version = ver }
 end
+
+---@param event string
+---@param fun function
+Autocmd = function (event, fun)
+    vim.api.nvim_create_autocmd(event, {
+        once = true,
+        callback = fun
+    })
+end
 local plugins = {
     gh("olimorris", "onedarkpro.nvim"),
 }
