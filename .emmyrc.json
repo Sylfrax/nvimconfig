@@ -3,7 +3,8 @@
   "workspace": {
     "library": [
       "$VIMRUNTIME",
-      "$HOME/.local/share/nvim/lazy"
+      "$HOME/.local/share/nvim/site/pack/core/opt/",
+      "./lua"
     ],
     "checkThirdParty": false
   },

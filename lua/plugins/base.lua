@@ -32,7 +32,7 @@ require('plugins.embellish.bufferline')
 require('plugins.embellish.noice')
 
 require("plugins.embellish.colorscheme")
-require("plugins.embellish.alpha")
+require("plugins.embellish.dashboard")
 require('plugins.tools.oil')
 require('plugins.embellish.indentation-line')
 
@@ -43,5 +43,5 @@ require('plugins.tools.fzf')
 require('plugins.embellish.highlight-color')
 require("plugins.lsp.tree")
 require("plugins.lsp.lsp")
-
+require('plugins.tools.nvim-tree')
 require('plugins.specific.md')

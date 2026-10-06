@@ -18,6 +18,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
                         "           /____/                                 ",
                         ">_               -- Out of World --             >_",
                     },
+                    footer = {
+                        "                 Ciallo ~( <·w< )^*               ",
+                    },
                 }
         })
         vim.api.nvim_set_hl(0, 'DashboardHeader', { fg = '#7bc6d0', bold = true })

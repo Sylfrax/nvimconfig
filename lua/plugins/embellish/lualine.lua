@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd("VimEnter", {
+vim.api.nvim_create_autocmd("BufReadPost", {
     once = true,
     group = Embllish,
     callback = function()
