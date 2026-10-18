@@ -10,8 +10,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.api.nvim_create_autocmd("UIEnter", {
     once = true,
     callback = function()
-        vim.pack.add({ gh("neovim", "nvim-lspconfig") })
-
+        vim.cmd.packadd('nvim-lspconfig')
         vim.lsp.enable({
             "emmylua_ls",
             "ocamllsp",
@@ -24,11 +23,12 @@ vim.api.nvim_create_autocmd("UIEnter", {
         vim.notify("Lsp is loaded!")
         require("plugins.lsp.lspconfig")
         require("plugins.lsp.blink")
+        vim.diagnostic.config({
+            virtual_text = true,    -- 显示行尾错误信息
+            signs = true,           -- 显示符号（你看到的 "E"）
+            underline = true,       -- 下划线
+        })
     end
 })
 -- Neovim 默认诊断配置
-vim.diagnostic.config({
-    virtual_text = true,    -- 显示行尾错误信息
-    signs = true,           -- 显示符号（你看到的 "E"）
-    underline = true,       -- 下划线
-})
+

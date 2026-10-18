@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("VimEnter", {
     once = true,
     callback = function ()
-        vim.pack.add({ gh("folke", "which-key.nvim") })
+        vim.cmd.packadd('which-key.nvim')
         require('which-key').setup({
             triggers = {
                 { '<Leader>', mode = { 'n', 'v' } }

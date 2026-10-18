@@ -1,3 +1,5 @@
+vim.cmd.packadd('onedarkpro.nvim')
+
 require("onedarkpro").setup({
     theme = "onedark"
 })

@@ -1,10 +1,7 @@
 vim.api.nvim_create_autocmd('VimEnter', {
     once = true,
     callback = function ()
-        vim.pack.add({
-            gh('nvim-tree', 'nvim-tree.lua'),
-            gh('nvim-tree', 'nvim-web-devicons')
-        })
+        vim.cmd.packadd('nvim-tree.lua')
         require('nvim-tree').setup({
             view = { width = 30 },
             filters = { dotfiles = true }

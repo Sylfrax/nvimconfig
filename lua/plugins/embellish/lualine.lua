@@ -1,8 +1,7 @@
 vim.api.nvim_create_autocmd("BufReadPost", {
     once = true,
-    group = Embllish,
     callback = function()
-        vim.pack.add({ gh("nvim-lualine", "lualine.nvim") })
+        vim.cmd.packadd('lualine.nvim')
         vim.notify("Lualine is running( ^3^ )/~~")
         require("lualine").setup({
             options = {

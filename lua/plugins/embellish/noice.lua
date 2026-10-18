@@ -1,11 +1,8 @@
 vim.api.nvim_create_autocmd('VimEnter', {
     once = true,
-    callback = function ()
-        vim.pack.add({ 
-            gh('folke', 'noice.nvim'),
-            gh('MunifTanjim', 'nui.nvim'),
-            gh('rcarriga', 'nvim-notify'),
-        })
+    callback = function()
+        vim.cmd.packadd('noice.nvim')
+
         require('noice').setup({
             presets = {
                 bottom_search = true,

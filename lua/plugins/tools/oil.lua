@@ -2,7 +2,7 @@
 vim.api.nvim_create_autocmd('VimEnter', {
     once = true,
     callback = function ()
-        vim.pack.add({  gh('stevearc', 'oil.nvim') })
+        vim.cmd.packadd('oil.nvim')
         require('oil').setup({
             default_file_explorer = true,
             columns = { 

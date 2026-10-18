@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("VimEnter", {
     once = true,
     callback = function ()
-        vim.pack.add({ gh('nvimdev', 'indentmini.nvim') })
+        vim.cmd.packadd('indentmini.nvim')
         require('indentmini').setup({
             char = '|',
             only_current = false,

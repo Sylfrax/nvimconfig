@@ -2,10 +2,7 @@ vim.api.nvim_create_autocmd('FileType', {
     once = true,
     pattern = 'lua',
     callback = function ()
-        vim.pack.add({
-            { src = "https://github.com/brenoprata10/nvim-highlight-colors" }
-        })
-
+        vim.cmd.packadd('nvim-highlight-colors')
         require("nvim-highlight-colors").setup({
             render = "background",        -- 高亮样式：background/foreground/virtual
             enable_hex = true,            -- 识别 #FFFFFF

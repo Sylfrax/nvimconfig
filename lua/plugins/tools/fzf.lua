@@ -1,9 +1,6 @@
 
 vim.keymap.set({ 'n', 'x' }, '<Leader>fz', function ()
-    vim.pack.add({ 
-        gh('ibhagwan', 'fzf-lua')
-    })
-
+    vim.cmd.packadd('fzf-lua')
     require('fzf-lua').setup({
         winopts = {
             height = 0.50,
