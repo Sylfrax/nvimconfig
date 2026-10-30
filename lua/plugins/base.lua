@@ -32,6 +32,8 @@ local plugins = {
     gh('MunifTanjim', 'nui.nvim'),
     gh('rcarriga', 'nvim-notify'),
 
+    gh_v("saghen", "blink.cmp", "v1.10.2"),
+
     gh("nvimdev", "dashboard-nvim"), 
     gh('stevearc', 'oil.nvim'), 
     gh('nvimdev', 'indentmini.nvim'),
@@ -42,7 +44,8 @@ local plugins = {
 
     gh('brenoprata10', 'nvim-highlight-colors'),
 
-    gh("nvim-treesitter", "nvim-treesitter"),
+    -- wait delete    gh("nvim-treesitter", "nvim-treesitter"),
+    gh('romus204', 'tree-sitter-manager.nvim'),
     gh("neovim", "nvim-lspconfig"),
     gh('nvim-tree', 'nvim-tree.lua'),
     gh('MeanderingProgrammer',  'render-markdown.nvim'),
@@ -67,7 +70,7 @@ require("plugins.tools.which-key")
 require('plugins.tools.autopairs')
 require('plugins.tools.fzf')
 require('plugins.embellish.highlight-color')
-require("plugins.lsp.tree")
+require("plugins.lsp.treesitter")
 require("plugins.lsp.lsp")
 require('plugins.tools.nvim-tree')
 require('plugins.specific.md')
