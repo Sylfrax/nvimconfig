@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd("BufReadPost", {
+vim.api.nvim_create_autocmd("VimEnter", {
     once = true,
     callback = function()
         vim.cmd.packadd('lualine.nvim')

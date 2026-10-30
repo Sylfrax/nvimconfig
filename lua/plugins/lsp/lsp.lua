@@ -18,9 +18,9 @@ vim.api.nvim_create_autocmd("UIEnter", {
             "clangd",
             "hls",
             "gopls",
-            "zls"
+            "zls",
+            "bashls"
         })
-        vim.notify("Lsp is loaded!")
         require("plugins.lsp.lspconfig")
         require("plugins.lsp.blink")
         vim.diagnostic.config({
