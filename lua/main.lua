@@ -1,3 +1,20 @@
+LoadPlugins = function (dir)
+    local names = {}
+    for name in vim.fs.dir(dir) do names[#names + 1] = name end
+    table.sort(names)
+    for _, name in ipairs(names) do
+        local path = dir .. "/" .. name
+        if vim.fn.isdirectory(path) == 1 then
+            LoadPlugins(path)
+        elseif name:match("%.lua$") then
+            dofile(path)
+        end
+    end
+end
+
+LoadP = function (dir)
+    LoadPlugins(vim.fs.normalize(dir))
+end
 
 
 ---@param name string
@@ -10,7 +27,7 @@ end
 ---@param repo string
 ---@return table
 gh = function (name, repo)
-    return { src = "https://github.com/"..name.."/"..repo }
+    return { src = tool_pin(name, repo) }
 end
 
 ---@param name string
@@ -57,7 +74,9 @@ vim.cmd.packadd('nvim-web-devicons')
 vim.cmd.packadd('nui.nvim')
 vim.cmd.packadd('nvim-notify')
 
-require('plugins.embellish.bufferline')
+
+LoadP('~/.config/nvim/lua/plugins/')
+--[[require('plugins.embellish.bufferline')
 require('plugins.embellish.noice')
 
 require("plugins.embellish.colorscheme")
@@ -73,4 +92,4 @@ require('plugins.embellish.highlight-color')
 require("plugins.lsp.treesitter")
 require("plugins.lsp.lsp")
 require('plugins.tools.nvim-tree')
-require('plugins.specific.md')
+require('plugins.specific.md')]]    
