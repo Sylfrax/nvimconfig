@@ -7,6 +7,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
       end,
 })
+
 vim.api.nvim_create_autocmd("UIEnter", {
     once = true,
     callback = function()
@@ -21,8 +22,6 @@ vim.api.nvim_create_autocmd("UIEnter", {
             "zls",
             "bashls"
         })
-        require("plugins.lsp.lspconfig")
-        require("plugins.lsp.blink")
         vim.diagnostic.config({
             virtual_text = true,    -- 显示行尾错误信息
             signs = true,           -- 显示符号（你看到的 "E"）
