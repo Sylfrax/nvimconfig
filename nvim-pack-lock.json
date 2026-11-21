@@ -65,6 +65,10 @@
       "rev": "24c806cb85c1f84d9faaff457cf7aa87c685a070",
       "src": "https://github.com/olimorris/onedarkpro.nvim"
     },
+    "opencode.nvim": {
+      "rev": "0dbd52d84e85023742ea999456b8804a987cac43",
+      "src": "https://github.com/sudo-tee/opencode.nvim"
+    },
     "render-markdown.nvim": {
       "rev": "8e8795368391036643b622875a6da6a51bcd33f4",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"

@@ -66,6 +66,7 @@ local plugins = {
     gh("neovim", "nvim-lspconfig"),
     gh('nvim-tree', 'nvim-tree.lua'),
     gh('MeanderingProgrammer',  'render-markdown.nvim'),
+    gh('sudo-tee', 'opencode.nvim'),
 }
 
 vim.pack.add(plugins, { load = function() end })

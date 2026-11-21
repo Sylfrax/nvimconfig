@@ -20,7 +20,9 @@ vim.api.nvim_create_autocmd("UIEnter", {
             "hls",
             "gopls",
             "zls",
-            "bashls"
+            "bashls",
+            "pylsp",
+            "lua_ls"
         })
         vim.diagnostic.config({
             virtual_text = true,    -- 显示行尾错误信息
