@@ -16,8 +16,8 @@ vim.g.loaded_netrw = 1
 
 vim.opt.shortmess:append({ I = true })
 
-vim.o.shell = 'zsh -l'
+vim.o.shell = 'bash -l'
 
-
+vim.opt.relativenumber = true
 -- keymap
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', {desc = '退出终端插入模式'})
