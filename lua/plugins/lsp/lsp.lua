@@ -22,7 +22,8 @@ vim.api.nvim_create_autocmd("UIEnter", {
             "zls",
             "bashls",
             "pylsp",
-            "lua_ls"
+            "lua_ls",
+            "fennel_ls"
         })
         vim.diagnostic.config({
             virtual_text = true,    -- 显示行尾错误信息
