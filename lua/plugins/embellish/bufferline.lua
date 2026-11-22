@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd('BufReadPost', {
+vim.api.nvim_create_autocmd('VimEnter', {
     once = true,
     callback = function ()
         vim.cmd.packadd('bufferline.nvim')
@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
             options = {
                 mode = 'buffers',
                 separator_style = 'slant',
-                always_show_bufferline = true,
+                always_show_bufferline = false,
                 show_buffer_close_icons = true,
             }
         })
