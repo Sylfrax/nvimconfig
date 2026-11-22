@@ -19,5 +19,11 @@ vim.opt.shortmess:append({ I = true })
 vim.o.shell = 'bash -l'
 
 vim.opt.relativenumber = true
+vim.opt.undofile = true
 -- keymap
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', {desc = '退出终端插入模式'})
+
+
+vim.opt.foldenable = false
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
