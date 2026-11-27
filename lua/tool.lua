@@ -34,6 +34,7 @@ end
 
 ---@class Data
 ---@field event? vim.event
+---@field ft string[]
 ---@field opts function
 
 ---@class Spec : vim.pack.Spec
@@ -45,10 +46,23 @@ M.lazy = function(plug)
 
     local d = plug.spec.data
     if not d or not d.opts then return end
+    
+    local o = true
+    if d.o then o = d.o end 
 
     if d.event then
         vim.api.nvim_create_autocmd(d.event, {
-            once = true,
+            once = o,
+            callback = function (ev)
+                vim.cmd.packadd(plug.spec.name)
+                d.opts(ev)
+            end
+        })
+    end
+    if d.ft then
+        vim.api.nvim_create_autocmd('FileType', {
+            once = o,
+            pattern = d.ft,
             callback = function (ev)
                 vim.cmd.packadd(plug.spec.name)
                 d.opts(ev)

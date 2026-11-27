@@ -15,7 +15,6 @@ return {
         opts = function ()
             vim.lsp.enable({
                 'emmylua_ls',
-                'ocamllsp',
                 'rust_analyzer',
                 'clangd',
                 'hls',
@@ -23,11 +22,10 @@ return {
                 'zls',
                 'bashls',
                 'pylsp',
-                'lua_ls',
-                'fennel_ls',
             })
             vim.diagnostic.config({
-                virtual_text = true,    -- 显示行尾错误信息
+                virtual_text = false,
+                virtual_lines = true,
                 signs = true,           -- 显示符号（你看到的 'E'）
                 underline = true,       -- 下划线
             })

@@ -2,7 +2,7 @@
 return {
     src = T.gh('MeanderingProgrammer', 'render-markdown.nvim'),
     data = {
-        event = 'VimEnter',
+        ft = "markdown",
         opts = function ()
             require('render-markdown').setup({
                 anti_conceal = { enabled = false },
