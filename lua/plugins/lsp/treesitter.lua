@@ -1,9 +1,5 @@
-vim.cmd.packadd('tree-sitter-manager.nvim')
-require('tree-sitter-manager').setup({
-    auto_install = true,
-})
-vim.api.nvim_create_autocmd("FileType", {
-    callback = function()
+vim.api.nvim_create_autocmd('FileType', {
+    callback = function ()
         local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
         if lang and vim.treesitter.language.add(lang) then
             pcall(vim.treesitter.start)
@@ -11,4 +7,15 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
-
+---@type vim.pack.Spec
+return {
+    src = T.gh('romus204', 'tree-sitter-manager.nvim'),
+    data = {
+        event = 'VimEnter',
+        opts = function ()
+            require('tree-sitter-manager').setup({
+                auto_install = true,
+            })
+        end
+    }
+}

@@ -1,11 +1,13 @@
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = { 'markdown', 'opencode_output' },
-    once = true,
-    callback = function ()
-        vim.cmd.packadd('render-markdown.nvim')
-        require('render-markdown').setup({
-            anti_conceal = { enabled = false },
-            file_types = { 'markdown', 'opencode_output' },
-        })
-    end
-})
+---@type vim.pack.Spec
+return {
+    src = T.gh('MeanderingProgrammer', 'render-markdown.nvim'),
+    data = {
+        event = 'VimEnter',
+        opts = function ()
+            require('render-markdown').setup({
+                anti_conceal = { enabled = false },
+                file_types = { 'markdown', 'opencode_output' },
+            })
+        end
+    }
+}

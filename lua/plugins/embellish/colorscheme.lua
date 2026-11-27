@@ -1,10 +1,16 @@
-vim.cmd.packadd('onedarkpro.nvim')
+---@type vim.pack.Spec
+return {
+    src = T.gh('olimorris', 'onedarkpro.nvim'),
+    data = {
+        event = 'VimEnter',
+        opts = function ()
+            local theme = 'onedark'
 
-require("onedarkpro").setup({
-    theme = "onedark"
-})
---vim.cmd.colorscheme("catppuccin")
---
-local theme = "onedark"
+            require('onedarkpro').setup({
+                theme = theme,
+            })
 
-vim.cmd.colorscheme(theme)
+            vim.cmd.colorscheme(theme)
+        end
+    }
+}

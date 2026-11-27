@@ -1,36 +1,36 @@
-
-vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function (args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if client and client:supports_method("textDocument/inlayHint") then
+        if client and client:supports_method('textDocument/inlayHint') then
             vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
         end
-      end,
+    end,
 })
 
-vim.api.nvim_create_autocmd("UIEnter", {
-    once = true,
-    callback = function()
-        vim.cmd.packadd('nvim-lspconfig')
-        vim.lsp.enable({
-            "emmylua_ls",
-            "ocamllsp",
-            "rust_analyzer",
-            "clangd",
-            "hls",
-            "gopls",
-            "zls",
-            "bashls",
-            "pylsp",
-            "lua_ls",
-            "fennel_ls"
-        })
-        vim.diagnostic.config({
-            virtual_text = true,    -- 显示行尾错误信息
-            signs = true,           -- 显示符号（你看到的 "E"）
-            underline = true,       -- 下划线
-        })
-    end
-})
--- Neovim 默认诊断配置
-
+---@type vim.pack.Spec
+return {
+    src = T.gh('neovim', 'nvim-lspconfig'),
+    data = {
+        event = 'UIEnter',
+        opts = function ()
+            vim.lsp.enable({
+                'emmylua_ls',
+                'ocamllsp',
+                'rust_analyzer',
+                'clangd',
+                'hls',
+                'gopls',
+                'zls',
+                'bashls',
+                'pylsp',
+                'lua_ls',
+                'fennel_ls',
+            })
+            vim.diagnostic.config({
+                virtual_text = true,    -- 显示行尾错误信息
+                signs = true,           -- 显示符号（你看到的 'E'）
+                underline = true,       -- 下划线
+            })
+        end
+    }
+}
