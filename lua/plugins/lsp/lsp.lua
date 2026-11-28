@@ -18,7 +18,6 @@ return {
                 'rust_analyzer',
                 'clangd',
                 'hls',
-                'csharp_ls',
                 'bashls',
                 'pylsp',
             })
