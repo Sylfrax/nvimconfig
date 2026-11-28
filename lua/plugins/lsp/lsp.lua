@@ -18,8 +18,7 @@ return {
                 'rust_analyzer',
                 'clangd',
                 'hls',
-                'gopls',
-                'zls',
+                'csharp_ls',
                 'bashls',
                 'pylsp',
             })
