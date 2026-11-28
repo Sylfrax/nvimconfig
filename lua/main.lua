@@ -1,17 +1,19 @@
 ---@type Tool
 T = require('tool')
 
-local plugs = T.addplug(vim.fn.stdpath('config') .. '/lua/plugins/')
-
-vim.pack.add({
-    T.gh('nvim-tree', 'nvim-web-devicons'),
-    T.gh('MunifTanjim', 'nui.nvim'),
-    T.gh('rcarriga', 'nvim-notify'),
-}, {
-    load = function (data)
-        vim.cmd.packadd(data.spec.name)
+---@param specs table
+---@param load boolean|function
+local function add(specs, load)
+    local ok, err = pcall(vim.pack.add, specs, { load = load })
+    if not ok then
+        vim.notify('vim.pack.add failed: ' .. tostring(err), vim.log.levels.ERROR)
     end
-})
+end
 
+-- 依赖先加载，后面的插件 setup 时才能 require 到它们。
+add(require('depends'), function (data)
+    vim.cmd.packadd(data.spec.name)
+end)
 
-vim.pack.add(plugs, { load = T.lazy })
+local plugs = T.addplug(vim.fn.stdpath('config') .. '/lua/plugins/')
+add(plugs, T.lazy)

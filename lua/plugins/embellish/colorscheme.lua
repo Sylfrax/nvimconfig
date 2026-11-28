@@ -2,7 +2,6 @@
 return {
     src = T.gh('olimorris', 'onedarkpro.nvim'),
     data = {
-        event = 'VimEnter',
         opts = function ()
             local theme = 'onedark'
 

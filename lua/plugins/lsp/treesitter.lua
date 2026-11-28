@@ -11,7 +11,6 @@ vim.api.nvim_create_autocmd('FileType', {
 return {
     src = T.gh('romus204', 'tree-sitter-manager.nvim'),
     data = {
-        event = 'VimEnter',
         opts = function ()
             require('tree-sitter-manager').setup({
                 auto_install = true,
